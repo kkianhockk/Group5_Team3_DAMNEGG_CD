@@ -253,12 +253,13 @@ footer {
 .font2 {
     color: #FFFFFF;
     margin-top: 35%;
-    font-size: 2vh;
+    font-size: 2.3vh;
 }
 
 .font3 {
     color: rgba(228, 171, 13, 1);
     margin-top: 5%;
+    font-size: 2.3vh;
 } 
 
 .hat {
