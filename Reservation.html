@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Reservation | DamnEgg</title>
+
+    <style>
+        @font-face {
+            font-family: Bold;
+            src: url(fonts/TwCenMt_bold.TTF);
+        }
+
+        @font-face {
+            font-family: Regular;
+            src: url(fonts/TwCenMt_regular.TTF);
+        }
+    </style>
+</head>
+
+<body style="background-color: #D7D2C8;">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#"><img src="asset/logo-home.png" width="30" height="30" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="Menu_1.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="Location.html">Location</a></li>
+                <li class="nav-item active"><a class="nav-link" href="Reservation.html">Reservation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <div style="margin-top: 20px;">
+        <div class="location-header" style="position: relative;">
+            <h1 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;"></h1>
+            <img src="asset/Reservation_bg1.png" alt="Location Background"
+                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 1;">
+        </div>
+    </div>
+    <div class="container my-5 border-custom">
+        <div class="row align-items-center">
+            <div
+                class="col-sm-6 col-md-6 col-lg-6 d-flex justify-content-center align-items-start flex-column text-left order-2 order-sm-2">
+                <p style="font-family: regular;"><strong>Address:</strong> Lot 123, Jalan Tian, Pekan Chee, 09310 Johor, Malaysia.</p>
+                <p style="font-family: regular;"><strong>Phone:</strong> 011-23456789</p>
+                <p style="font-family: regular;"><strong>Operating Hours:</strong> Monday - Sunday (9:00 a.m. - 10:00 p.m.)</p>
+            </div>
+            <div
+                class="col-sm-6 col-md-6 col-lg-6 d-flex justify-content-center align-items-center text-center order-1 order-sm-1">
+                <img src="asset/Logo_1.png" alt="Logo" class="img-fluid" style="max-width: 80%; height: auto;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Reservation Form Section -->
+    <div class="container my-5">
+        <div class="p-5 rounded reservation-form bg-custom">
+            <h3 class="text-center mb-4 text-white" style="font-family: Bold;">Fill in your reservation details</h3>
+            <!-- Form Starts -->
+            <form id="reservationForm"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSfbBoJXsK17UVmlr2RU4KV3PmBCTj9isYjrWXo2xQjmnpKfmQ/formResponse"
+                method="post" target="hidden_iframe" class="row g-3 needs-validation"
+                onsubmit="return handleSubmit(event)" novalidate>
+                <!-- Name -->
+                <div class="col-md-6">
+                    <label for="validationCustom01" class="form-label text-white"
+                        style="font-family: Bold;">Name</label>
+                    <input type="text" class="form-control" id="validationCustom01" name="entry.366340186"
+                        placeholder="Enter your name" required>
+                    <div class="invalid-feedback" style="font-family: regular;">Please enter your name.</div>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="col-md-6">
+                    <label for="validationCustom02" class="form-label text-white" style="font-family: Bold;">Phone
+                        Number</label>
+                    <input type="number" class="form-control" id="validationCustom02" name="entry.1886583635"
+                        placeholder="Enter your phone number" required>
+                    <div class="invalid-feedback" style="font-family: regular;">Please enter your phone number.</div>
+                </div>
+
+                <!-- Number of People -->
+                <div class="col-md-6">
+                    <label for="validationCustom03" class="form-label text-white" style="font-family: Bold;">Number of
+                        People</label>
+                    <input type="number" class="form-control" id="validationCustom03" name="entry.175664028"
+                        placeholder="Enter number of people" required>
+                    <div class="invalid-feedback" style="font-family: regular;">Please enter the number of people.</div>
+                </div>
+
+                <!-- Date -->
+                <div class="col-md-6">
+                    <label for="validationCustom04" class="form-label text-white"
+                        style="font-family: Bold;">Date</label>
+                    <input type="date" class="form-control" id="validationCustom04" name="entry.914067582" required>
+                    <div class="invalid-feedback" style="font-family: regular;">Please select a date.</div>
+                </div>
+
+                <!-- Time -->
+                <div class="col-md-6">
+                    <label for="validationCustom05" class="form-label text-white"
+                        style="font-family: Bold;">Time</label>
+                    <input type="time" class="form-control" id="validationCustom05" name="entry.500084176" required>
+                    <div class="invalid-feedback" style="font-family: regular;">Please select a time.</div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-12" style="padding: 20px;">
+                    <button type="submit" class="btn btn-primary btn-block"
+                        style="background-color: #815124; color: #fff; border-radius: 25px; padding: 10px 20px; border: none; font-family: Bold;">
+                        Submit
+                    </button>
+                </div>
+            </form>
+            <iframe name="hidden_iframe" style="display:none;"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();  // Prevent the default form submission
+
+            var form = document.getElementById('reservationForm');
+            if (!form.checkValidity()) {
+                form.classList.add('was-validated');
+                return;
+            }
+
+            // If form is valid, submit it and show "Thank You" page
+            form.submit();
+            setTimeout(function () {
+                window.location.href = "Reservation_done.html"; // Redirect after form submission
+            }, 500);  // Small delay to ensure the form submission is complete
+        }
+    </script>
+
+    <!-- Bootstrap Validation Script -->
+    <script>
+        // Enable Bootstrap form validation
+        (function () {
+            'use strict';
+            var forms = document.querySelectorAll('.needs-validation');
+            Array.prototype.slice.call(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+    </script>
+
+    <!-- Footer -->
+    <div class="container-fluid text-white py-4" style="background-color: #4C473A;">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="asset/Logo_1.png" alt="Logo" style="max-width: 70px; height: auto;">
+            </div>
+            <div class="col-md-4 text-center" style="font-family: regular;">
+                <p style="font-family: Bold;">This is the official website of Damn Egg. Any counterfeiting or plagiarism will be prosecuted.</p>
+            </div>
+            <div class="col-md-4 text-center" style="font-family: regular;">
+                <p style="font-family: Bold;">Contact Us: +011-1009 9009 | Hq@Damnegg.my</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
