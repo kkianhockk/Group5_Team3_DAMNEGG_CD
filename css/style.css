@@ -234,30 +234,31 @@ footer {
 }
 
 .title-font {
-    font-size: 50px;
+    font-size: 5vh;
     margin-top: 20px;
     color: #FFFFFF;
 }
 
 .title-font2 {
-    font-size: 70px;
+    font-size: 5vh;
     margin-top: 35%;
     color: #FFFFFF;
 }
 
 .font {
     color: #FFFFFF;
-    font-size: 20px;
+    font-size: 3vh;
 }
 
 .font2 {
     color: #FFFFFF;
     margin-top: 35%;
+    font-size: 2vh;
 }
 
 .font3 {
     color: rgba(228, 171, 13, 1);
-    margin-top: 15%;
+    margin-top: 5%;
 } 
 
 .hat {
